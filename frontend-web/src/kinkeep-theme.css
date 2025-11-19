@@ -1,0 +1,626 @@
+/* KinKeep Brand Theme - Family Memory Preservation */
+
+:root {
+  /* Primary Brand Colors - Warm Heritage Tones */
+  --kinkeep-primary: #8B4513;        /* Saddle Brown - represents heritage, tradition */
+  --kinkeep-primary-light: #A0522D;  /* Sienna - lighter heritage tone */
+  --kinkeep-primary-dark: #654321;   /* Dark Brown - deeper tradition */
+  
+  /* Secondary Colors - Memory & Warmth */
+  --kinkeep-secondary: #DAA520;      /* Goldenrod - represents precious memories */
+  --kinkeep-secondary-light: #F4E4BC; /* Cream - warm, nostalgic */
+  --kinkeep-secondary-dark: #B8860B; /* Dark Goldenrod - rich memories */
+  
+  /* Accent Colors - Family Connection */
+  --kinkeep-accent: #CD853F;         /* Peru - earthy family bonds */
+  --kinkeep-accent-light: #DEB887;   /* Burlywood - gentle connections */
+  --kinkeep-accent-dark: #A0522D;    /* Sienna - strong bonds */
+  
+  /* Neutral Colors - Timeless & Classic */
+  --kinkeep-neutral-50: #FEFCF8;     /* Warm white - pure memories */
+  --kinkeep-neutral-100: #F5F1E8;    /* Cream white - gentle background */
+  --kinkeep-neutral-200: #E8DCC6;    /* Light beige - soft contrast */
+  --kinkeep-neutral-300: #D2C5A2;    /* Medium beige - subtle borders */
+  --kinkeep-neutral-400: #B8A082;    /* Warm gray - muted text */
+  --kinkeep-neutral-500: #8B7355;    /* Brown gray - secondary text */
+  --kinkeep-neutral-600: #6B5B47;    /* Dark brown gray - primary text */
+  --kinkeep-neutral-700: #4A3F35;    /* Very dark brown - headings */
+  --kinkeep-neutral-800: #2D251E;    /* Almost black brown - emphasis */
+  --kinkeep-neutral-900: #1A1612;    /* Deep brown black - maximum contrast */
+  
+  /* Semantic Colors */
+  --kinkeep-success: #228B22;        /* Forest Green - growth, life */
+  --kinkeep-warning: #FF8C00;        /* Dark Orange - attention */
+  --kinkeep-error: #B22222;          /* Fire Brick - important alerts */
+  --kinkeep-info: #4682B4;           /* Steel Blue - information */
+  
+  /* Gradient Definitions */
+  --kinkeep-gradient-primary: linear-gradient(135deg, var(--kinkeep-primary) 0%, var(--kinkeep-secondary) 100%);
+  --kinkeep-gradient-warm: linear-gradient(135deg, var(--kinkeep-secondary-light) 0%, var(--kinkeep-accent-light) 100%);
+  --kinkeep-gradient-heritage: linear-gradient(135deg, var(--kinkeep-primary-dark) 0%, var(--kinkeep-primary) 50%, var(--kinkeep-accent) 100%);
+  
+  /* Typography */
+  --kinkeep-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --kinkeep-font-family-serif: 'Playfair Display', Georgia, serif;
+  
+  /* Spacing & Sizing */
+  --kinkeep-border-radius: 12px;
+  --kinkeep-border-radius-sm: 8px;
+  --kinkeep-border-radius-lg: 16px;
+  --kinkeep-shadow: 0 4px 6px -1px rgba(139, 69, 19, 0.1), 0 2px 4px -1px rgba(139, 69, 19, 0.06);
+  --kinkeep-shadow-lg: 0 10px 15px -3px rgba(139, 69, 19, 0.1), 0 4px 6px -2px rgba(139, 69, 19, 0.05);
+}
+
+/* Global Overrides */
+body {
+  background-color: var(--kinkeep-neutral-50) !important;
+  color: var(--kinkeep-neutral-700) !important;
+  font-family: var(--kinkeep-font-family) !important;
+}
+
+/* KinKeep Component Classes */
+.kinkeep-btn-primary {
+  background: var(--kinkeep-gradient-primary) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: var(--kinkeep-border-radius) !important;
+  padding: 12px 24px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: var(--kinkeep-shadow) !important;
+}
+
+.kinkeep-btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--kinkeep-shadow-lg) !important;
+  opacity: 0.9 !important;
+}
+
+.kinkeep-btn-secondary {
+  background-color: var(--kinkeep-neutral-100) !important;
+  color: var(--kinkeep-primary) !important;
+  border: 2px solid var(--kinkeep-neutral-300) !important;
+  border-radius: var(--kinkeep-border-radius) !important;
+  padding: 10px 22px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.kinkeep-btn-secondary:hover {
+  background-color: var(--kinkeep-primary) !important;
+  color: white !important;
+  border-color: var(--kinkeep-primary) !important;
+}
+
+.kinkeep-card {
+  background-color: white !important;
+  border: 1px solid var(--kinkeep-neutral-200) !important;
+  border-radius: var(--kinkeep-border-radius) !important;
+  box-shadow: var(--kinkeep-shadow) !important;
+  transition: all 0.3s ease !important;
+}
+
+.kinkeep-card:hover {
+  box-shadow: var(--kinkeep-shadow-lg) !important;
+  transform: translateY(-2px) !important;
+}
+
+.kinkeep-header {
+  background-color: white !important;
+  border-bottom: 1px solid var(--kinkeep-neutral-200) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.kinkeep-nav-link {
+  color: var(--kinkeep-neutral-600) !important;
+  transition: color 0.3s ease !important;
+}
+
+.kinkeep-nav-link:hover,
+.kinkeep-nav-link.active {
+  color: var(--kinkeep-primary) !important;
+}
+
+.kinkeep-input {
+  background-color: var(--kinkeep-neutral-100) !important;
+  border: 2px solid var(--kinkeep-neutral-200) !important;
+  border-radius: var(--kinkeep-border-radius-sm) !important;
+  color: var(--kinkeep-neutral-700) !important;
+  padding: 12px 16px !important;
+  transition: all 0.3s ease !important;
+}
+
+.kinkeep-input:focus {
+  outline: none !important;
+  border-color: var(--kinkeep-primary) !important;
+  background-color: white !important;
+  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1) !important;
+}
+
+.kinkeep-avatar {
+  background: var(--kinkeep-gradient-heritage) !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+.kinkeep-gradient-text {
+  background: var(--kinkeep-gradient-primary) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  font-weight: 700 !important;
+}
+
+.kinkeep-brand-logo {
+  background: var(--kinkeep-gradient-primary) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  font-family: var(--kinkeep-font-family-serif) !important;
+  font-weight: 700 !important;
+  font-size: 1.75rem !important;
+}
+
+/* Animation Classes */
+.kinkeep-fade-in {
+  animation: kinkeepFadeIn 0.6s ease-out;
+}
+
+.kinkeep-slide-up {
+  animation: kinkeepSlideUp 0.5s ease-out;
+}
+
+@keyframes kinkeepFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes kinkeepSlideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+/* Comprehensive Color Overrides - Every Element */
+
+/* Primary Colors */
+.bg-blue-500, .bg-blue-600, .text-blue-500, .text-blue-600, .border-blue-500 {
+  background-color: var(--kinkeep-primary) !important;
+  color: var(--kinkeep-primary) !important;
+  border-color: var(--kinkeep-primary) !important;
+}
+
+.hover\:bg-blue-600:hover, .bg-blue-600:hover {
+  background-color: var(--kinkeep-primary-dark) !important;
+}
+
+.hover\:text-blue-700:hover {
+  color: var(--kinkeep-primary-dark) !important;
+}
+
+/* Backgrounds */
+.bg-white {
+  background-color: var(--kinkeep-neutral-50) !important;
+}
+
+.bg-gray-50 {
+  background-color: var(--kinkeep-neutral-100) !important;
+}
+
+.bg-gray-100 {
+  background-color: var(--kinkeep-neutral-200) !important;
+}
+
+.bg-gray-200 {
+  background-color: var(--kinkeep-neutral-300) !important;
+}
+
+.bg-gray-300 {
+  background-color: var(--kinkeep-neutral-400) !important;
+}
+
+/* Text Colors */
+.text-gray-900 {
+  color: var(--kinkeep-neutral-800) !important;
+}
+
+.text-gray-800 {
+  color: var(--kinkeep-neutral-700) !important;
+}
+
+.text-gray-700 {
+  color: var(--kinkeep-neutral-600) !important;
+}
+
+.text-gray-600 {
+  color: var(--kinkeep-neutral-500) !important;
+}
+
+.text-gray-500 {
+  color: var(--kinkeep-neutral-400) !important;
+}
+
+.text-gray-400 {
+  color: var(--kinkeep-neutral-300) !important;
+}
+
+/* Borders */
+.border-gray-300, .border-gray-200 {
+  border-color: var(--kinkeep-neutral-300) !important;
+}
+
+.border-gray-100 {
+  border-color: var(--kinkeep-neutral-200) !important;
+}
+
+/* Hover States */
+.hover\:bg-gray-50:hover {
+  background-color: var(--kinkeep-neutral-100) !important;
+}
+
+.hover\:bg-gray-100:hover {
+  background-color: var(--kinkeep-neutral-200) !important;
+}
+
+.hover\:text-gray-900:hover {
+  color: var(--kinkeep-neutral-800) !important;
+}
+
+.hover\:text-gray-700:hover {
+  color: var(--kinkeep-neutral-600) !important;
+}
+
+/* Focus States */
+.focus\:border-blue-500:focus {
+  border-color: var(--kinkeep-primary) !important;
+}
+
+.focus\:ring-blue-500:focus {
+  --tw-ring-color: var(--kinkeep-primary) !important;
+}
+
+/* Gradients */
+.instagram-gradient,
+.bg-gradient-to-r {
+  background: var(--kinkeep-gradient-heritage) !important;
+}
+
+/* Buttons - All Variants */
+button {
+  transition: all 0.3s ease !important;
+}
+
+.btn-primary,
+.bg-blue-500 {
+  background: var(--kinkeep-gradient-primary) !important;
+  color: white !important;
+  border-radius: var(--kinkeep-border-radius) !important;
+  box-shadow: var(--kinkeep-shadow) !important;
+}
+
+.btn-secondary {
+  background-color: var(--kinkeep-neutral-100) !important;
+  color: var(--kinkeep-primary) !important;
+  border: 2px solid var(--kinkeep-neutral-300) !important;
+  border-radius: var(--kinkeep-border-radius) !important;
+}
+
+.btn-secondary:hover {
+  background-color: var(--kinkeep-primary) !important;
+  color: white !important;
+}
+
+/* Cards and Containers */
+.rounded-lg {
+  border-radius: var(--kinkeep-border-radius) !important;
+}
+
+.rounded {
+  border-radius: var(--kinkeep-border-radius-sm) !important;
+}
+
+.shadow-lg {
+  box-shadow: var(--kinkeep-shadow-lg) !important;
+}
+
+.shadow {
+  box-shadow: var(--kinkeep-shadow) !important;
+}
+
+/* Form Elements */
+input, textarea, select {
+  background-color: var(--kinkeep-neutral-100) !important;
+  border-color: var(--kinkeep-neutral-300) !important;
+  color: var(--kinkeep-neutral-700) !important;
+  border-radius: var(--kinkeep-border-radius-sm) !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  background-color: white !important;
+  border-color: var(--kinkeep-primary) !important;
+  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1) !important;
+}
+
+/* Navigation */
+nav {
+  background-color: white !important;
+  border-color: var(--kinkeep-neutral-200) !important;
+}
+
+/* Links */
+a {
+  color: var(--kinkeep-primary) !important;
+  transition: color 0.3s ease !important;
+}
+
+a:hover {
+  color: var(--kinkeep-primary-dark) !important;
+}
+
+/* Loading States */
+.animate-spin {
+  border-color: var(--kinkeep-neutral-200) !important;
+  border-top-color: var(--kinkeep-primary) !important;
+}
+
+/* Success/Error/Warning States */
+.text-green-600 {
+  color: var(--kinkeep-success) !important;
+}
+
+.text-red-500, .text-red-600 {
+  color: var(--kinkeep-error) !important;
+}
+
+.text-yellow-600 {
+  color: var(--kinkeep-warning) !important;
+}
+
+.bg-green-100 {
+  background-color: rgba(34, 139, 34, 0.1) !important;
+}
+
+.bg-red-100 {
+  background-color: rgba(178, 34, 34, 0.1) !important;
+}
+
+.bg-yellow-100 {
+  background-color: rgba(255, 140, 0, 0.1) !important;
+}
+
+/* Specific Component Overrides */
+.max-w-2xl, .max-w-4xl, .max-w-md {
+  background-color: transparent !important;
+}
+
+/* Modal and Overlay */
+.fixed.inset-0 {
+  background-color: rgba(26, 22, 18, 0.5) !important;
+}
+
+/* Progress Bars */
+.bg-blue-500 {
+  background-color: var(--kinkeep-primary) !important;
+}
+
+/* Tabs */
+.border-b-2.border-gray-900 {
+  border-color: var(--kinkeep-primary) !important;
+}
+
+/* Avatars and Profile Images */
+.rounded-full {
+  border-radius: 50% !important;
+}
+
+/* Story Rings */
+.p-0\.5 {
+  background: var(--kinkeep-gradient-primary) !important;
+  border-radius: 50% !important;
+}
+
+/* Notification Badges */
+.bg-red-500 {
+  background-color: var(--kinkeep-error) !important;
+}
+
+/* Disabled States */
+.disabled\:opacity-50:disabled {
+  opacity: 0.5 !important;
+  background-color: var(--kinkeep-neutral-300) !important;
+}
+
+/* Placeholder Text */
+::placeholder {
+  color: var(--kinkeep-neutral-400) !important;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--kinkeep-secondary-light) !important;
+  color: var(--kinkeep-neutral-800) !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--kinkeep-neutral-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--kinkeep-neutral-300);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--kinkeep-primary);
+}
+
+/* Story highlights and special elements */
+.kinkeep-story-ring {
+  background: var(--kinkeep-gradient-primary) !important;
+  padding: 3px !important;
+  border-radius: 50% !important;
+}
+
+.kinkeep-story-inner {
+  background: white !important;
+  border-radius: 50% !important;
+  padding: 2px !important;
+}
+
+/* Loading spinner */
+.kinkeep-spinner {
+  border-color: var(--kinkeep-neutral-200) !important;
+  border-top-color: var(--kinkeep-primary) !important;
+}
+
+/* Success/Error states */
+.kinkeep-success {
+  background-color: var(--kinkeep-success) !important;
+  color: white !important;
+}
+
+.kinkeep-error {
+  background-color: var(--kinkeep-error) !important;
+  color: white !important;
+}
+
+.kinkeep-warning {
+  background-color: var(--kinkeep-warning) !important;
+  color: white !important;
+}
+
+/* Messaging Interface Specific Styles */
+.conversation-item:hover {
+  background-color: var(--kinkeep-neutral-50) !important;
+}
+
+.conversation-item.active {
+  background-color: var(--kinkeep-neutral-100) !important;
+}
+
+.message-input {
+  border: 1px solid var(--kinkeep-neutral-300) !important;
+  border-radius: 9999px !important;
+}
+
+.message-input:focus {
+  outline: none !important;
+  ring: 2px solid var(--kinkeep-primary) !important;
+  border-color: transparent !important;
+}
+
+.send-button {
+  color: var(--kinkeep-primary) !important;
+}
+
+.send-button:hover {
+  color: var(--kinkeep-secondary) !important;
+}
+
+.send-button:disabled {
+  color: var(--kinkeep-neutral-400) !important;
+}
+
+.unread-badge {
+  background-color: var(--kinkeep-primary) !important;
+  color: white !important;
+}
+
+.chat-header {
+  border-bottom: 1px solid var(--kinkeep-neutral-300) !important;
+}
+
+.messages-sidebar {
+  border-right: 1px solid var(--kinkeep-neutral-300) !important;
+}
+
+.new-message-modal {
+  background-color: white !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+.search-input {
+  border: 1px solid var(--kinkeep-neutral-300) !important;
+  border-radius: 0.5rem !important;
+}
+
+.search-input:focus {
+  outline: none !important;
+  ring: 2px solid var(--kinkeep-primary) !important;
+  border-color: transparent !important;
+}
+
+.user-search-item:hover {
+  background-color: var(--kinkeep-neutral-50) !important;
+}
+
+.message-bubble {
+  background: var(--kinkeep-primary) !important;
+  color: white !important;
+}
+
+.message-bubble.received {
+  background: var(--kinkeep-neutral-100) !important;
+  color: var(--kinkeep-neutral-900) !important;
+}
+
+/* Message time hover effect */
+.group:hover .opacity-0 {
+  opacity: 1 !important;
+}
+
+/* Chat input focus ring */
+.focus\:ring-kinkeep-primary:focus {
+  --tw-ring-color: var(--kinkeep-primary) !important;
+}
+
+/* Message attachment buttons */
+.attachment-button:hover {
+  background-color: var(--kinkeep-neutral-100) !important;
+}
+
+/* Online status indicator */
+.online-indicator {
+  background-color: var(--kinkeep-success) !important;
+  border: 2px solid white !important;
+}
+
+/* Message reactions */
+.message-reaction {
+  background-color: var(--kinkeep-neutral-100) !important;
+  border: 1px solid var(--kinkeep-neutral-200) !important;
+  border-radius: 12px !important;
+}
+
+.message-reaction:hover {
+  background-color: var(--kinkeep-neutral-200) !important;
+}
+
+/* Typing indicator */
+.typing-indicator {
+  background-color: var(--kinkeep-neutral-200) !important;
+  border-radius: 18px !important;
+}
+
+.typing-dot {
+  background-color: var(--kinkeep-neutral-500) !important;
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+@keyframes typing {
+  0%, 60%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+}

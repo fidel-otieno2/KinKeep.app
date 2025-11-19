@@ -1,0 +1,67 @@
+/* INSTAGRAM THEME OVERRIDE - NUCLEAR OPTION */
+/* This file forces Instagram styling and removes all amber colors */
+
+/* FORCE INSTAGRAM COLORS ON EVERYTHING */
+html, body, #root, .App, div, main, section, article, aside, header, footer, nav {
+  background-color: #fafafa !important;
+  color: #262626 !important;
+}
+
+/* KILL ALL AMBER COLORS */
+*[class*="amber"], 
+*[style*="amber"],
+*[class*="orange"],
+*[class*="yellow"] {
+  background-color: #fafafa !important;
+  color: #262626 !important;
+  border-color: #dbdbdb !important;
+}
+
+/* FORCE WHITE BACKGROUNDS FOR CARDS */
+.bg-white, 
+*[class*="card"],
+*[class*="post"],
+*[class*="modal"] {
+  background-color: white !important;
+  border: 1px solid #dbdbdb !important;
+}
+
+/* FORCE INSTAGRAM BLUE FOR BUTTONS */
+.btn-primary,
+button[type="submit"],
+*[class*="blue"] {
+  background-color: #0095f6 !important;
+  color: white !important;
+}
+
+/* FORCE GRAY BACKGROUNDS */
+.bg-gray-50,
+.bg-gray-100 {
+  background-color: #fafafa !important;
+}
+
+/* FORCE TEXT COLORS */
+h1, h2, h3, h4, h5, h6, p, span, div, label, a {
+  color: #262626 !important;
+}
+
+/* FORCE INPUT STYLING */
+input, textarea, select {
+  background-color: #fafafa !important;
+  border: 1px solid #dbdbdb !important;
+  color: #262626 !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  background-color: white !important;
+  border-color: #0095f6 !important;
+}
+
+/* OVERRIDE ANY REMAINING WARM COLORS */
+*[style*="#f59e0b"],
+*[style*="#d97706"],
+*[style*="#92400e"],
+*[style*="#451a03"] {
+  background-color: #fafafa !important;
+  color: #262626 !important;
+}

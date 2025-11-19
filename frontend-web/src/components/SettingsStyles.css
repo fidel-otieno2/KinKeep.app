@@ -1,0 +1,49 @@
+/* Settings Page Text Color Fixes */
+.settings-container * {
+  color: #111827 !important;
+}
+
+.settings-container input,
+.settings-container textarea,
+.settings-container select {
+  color: #111827 !important;
+  background-color: #ffffff !important;
+}
+
+.settings-container label {
+  color: #374151 !important;
+}
+
+.settings-container h1,
+.settings-container h2,
+.settings-container h3,
+.settings-container h4,
+.settings-container h5,
+.settings-container h6 {
+  color: #111827 !important;
+}
+
+.settings-container p {
+  color: #6b7280 !important;
+}
+
+.settings-container .text-gray-500 {
+  color: #6b7280 !important;
+}
+
+.settings-container .text-gray-600 {
+  color: #4b5563 !important;
+}
+
+.settings-container .text-gray-700 {
+  color: #374151 !important;
+}
+
+.settings-container button {
+  color: inherit !important;
+}
+
+.settings-container .bg-white {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+}
